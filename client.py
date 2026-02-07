@@ -18,14 +18,14 @@ def rpc_call(profile):
 
 #VALID INPUT
 print(rpc_call({
-    "name": "Alice",
+    "name": "Bindiya",
     "id": 1,
     "grades": [80, 90, 100]
 }))
 
 #TYPE ERROR
 print(rpc_call({
-    "name": "Bob",
+    "name": "Kenny",
     "id": "two",
     "grades": [70, 80]
 }))

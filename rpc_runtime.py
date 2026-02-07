@@ -1,9 +1,8 @@
 import socket
 import json
 
-
 def send_msg(sock, data):
-    message = json.dumps(data).encode("utf-8")
+    message = json.dumps(data).encode("utf-8") #Converts Python objects into JSON (serialization)
     sock.sendall(message)
 
 
@@ -11,7 +10,7 @@ def recv_msg(sock):
     data = sock.recv(4096).decode("utf-8")
     if not data:
         return None
-    return json.loads(data)
+    return json.loads(data) #Converts JSON back into Python objects (deserialization)
 
 
 #TYPE VALIDATION
